@@ -522,7 +522,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Meltdown", "impostor2", 'red', FlxColor.RED, FROM_STORY_MODE, ['meltdown'], 0, false]
 			],
 
-			section: 0
+			section: 9
 		});
 
 		weeks.push({
@@ -533,7 +533,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['ejected'], 0, false]
 			],
 
-			section: 0
+			section: 9
 		});
 
 		weeks.push({
@@ -545,7 +545,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Double Kill", "whiteblack", 'black', FlxColor.fromRGB(179, 0, 255), FROM_STORY_MODE, ['double-kill'], 0, false]
 			],
 
-			section: 0
+			section: 9
 		});
 
 		weeks.push({
@@ -554,12 +554,12 @@ class AmongFreeplayState extends MusicBeatState
 				["Finale", "black", 'finale', FlxColor.fromRGB(179, 0, 255), SPECIAL, ['finale'], 0, false]
 			],
 
-			section: 0
+			section: 9
 		});
 
 		weeks.push({
 			songs: [["Identity Crisis", "monotone", 'monotone', FlxColor.BLACK, SPECIAL, ['meltdown', 'ejected', 'double-kill', 'defeat', 'boiling-point', 'neurotic', 'pretender'], 0, false]],
-			section: 0
+			section: 9
 		});
 
 		weeks.push({
@@ -690,6 +690,13 @@ class AmongFreeplayState extends MusicBeatState
 			section: 8
 		});
 
+		weeks.push({
+			songs: [["Triple Threat", "mcbffree", 'grinch', FlxColor.fromRGB(250, 42, 42), BEANS, [], 0, false]
+			],
+
+			section: 0
+		});
+
 		return weeks;
 	}
 
@@ -700,13 +707,13 @@ class AmongFreeplayState extends MusicBeatState
 
 		curWeek += change;
 
-		if (curWeek > 8)
+		if (curWeek > 0)
 		{
 			curWeek = 0;
 		}
 		if (curWeek < 0)
 		{
-			curWeek = 8;
+			curWeek = 0;
 		}
 
 		trace(curWeek + ' ' + weeks.length);

@@ -38,7 +38,7 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
 	
-	var optionShit:Array<String> = ['Story Mode', 'Freeplay', 'Gallery', 'Credits', 'Options', 'Shop', 'Innersloth'];
+	var optionShit:Array<String> = ['Freeplay', 'Gallery', 'Credits', 'Options', 'Shop', 'Innersloth'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -174,7 +174,7 @@ class MainMenuState extends MusicBeatState
 				case 5:
 					testButton.setPosition(590, 640);
 				case 6:
-					testButton.setPosition(725, 640);
+					testButton.setPosition(900, 900);
 			}
 			menuItems.add(testButton);
 		}		
@@ -346,9 +346,6 @@ class MainMenuState extends MusicBeatState
 
 		switch (daChoice)
 		{
-			case 'Story Mode':
-				FlxG.switchState(new AmongStoryMenuState());
-				trace("Story Menu Selected");
 			case 'Freeplay':
 				FlxG.switchState(new AmongFreeplayState());
 				trace("Freeplay Menu Selected");
