@@ -38,7 +38,7 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
 	
-	var optionShit:Array<String> = ['Freeplay', 'Gallery', 'Credits', 'Options', 'Shop', 'Innersloth'];
+	var optionShit:Array<String> = ['Freeplay'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -149,8 +149,8 @@ class MainMenuState extends MusicBeatState
 				testButton.frames = Paths.getSparrowAtlas('menuBooba/Buttons_UI', 'impostor');
 			else
 				testButton.frames = Paths.getSparrowAtlas('menuBooba/Big_Buttons_UI', 'impostor');
-			testButton.animation.addByPrefix('idle', optionShit[i] + ' Button', 24, true);
-			testButton.animation.addByPrefix('hover', optionShit[i] + ' Select', 24, true);
+			testButton.animation.addByPrefix('idle', 'Freeplay' + ' Button', 24, true);
+			testButton.animation.addByPrefix('hover', 'Freeplay' + ' Select', 24, true);
 			testButton.animation.play('idle');
 			testButton.antialiasing = true;
 			testButton.scale.set(0.50 ,0.50);
@@ -162,19 +162,7 @@ class MainMenuState extends MusicBeatState
 			//hi
 			switch(i) {
 				case 0:
-					testButton.setPosition(400, 475);
-				case 1:
-					testButton.setPosition(633, 475);
-				case 2:
-					testButton.setPosition(400, 580);
-				case 3:
-					testButton.setPosition(633, 580);
-				case 4:
-					testButton.setPosition(455, 640);
-				case 5:
-					testButton.setPosition(590, 640);
-				case 6:
-					testButton.setPosition(900, 900);
+					testButton.setPosition(525, 475);
 			}
 			menuItems.add(testButton);
 		}		
@@ -287,7 +275,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-				FlxG.switchState(new TitleState());
+				FlxG.switchState(new OptionsState());
 			}
 		}
 

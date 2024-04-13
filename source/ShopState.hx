@@ -39,7 +39,7 @@ class ShopState extends MusicBeatState
     var buttonTween:FlxTween;
     var textTween:FlxTween;
     
-    var charList:Array<String> = ['none','amongbf','redp','greenp', 'blackp','bfairship', 'bfg', 'bfmira', 'bfpolus', 'bfsauce', 'dripbf', 'picolobby']; // STOP ADDING TO THIS LIST IM TRYNA GETSHIT WORKING
+    var charList:Array<String> = ['none','amongbf','redp','greenp', 'blackp','bfairship', 'bfg', 'bfmira', 'bfpolus', 'bfsauce', 'dripbf', 'picolobby', 'Z3mp MCBF']; // STOP ADDING TO THIS LIST IM TRYNA GETSHIT WORKING
     var curSelected:Int = 0;
     var things:FlxTypedGroup<FlxText>;
 
@@ -164,7 +164,9 @@ class ShopState extends MusicBeatState
         ['left', 'stick-bf', 'henrygf', 375, false, 'Stickmin GF', "Unlocked by completing Henry's week.", GF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "..."],
 
         ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', "a tiny henry?", PET],
-        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "and an ellie too!", PET]
+        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "and an ellie too!", PET],
+
+        ['right', 'amongbf', 'Z3mp MCBF', 27, false, 'Z3mp MCBF', "I thought you hated Restyles?", BF, COMPLETED, ['sussus-moogus', 'sabotage', 'meltdown', 'sussus-toogus', 'lights-down', 'ejected', 'mando', 'dlow', 'oversight', 'danger', 'double-kill'], true, "The funk is a new shop option doing here?"]
     ];
 
     var root:ShopNode;
